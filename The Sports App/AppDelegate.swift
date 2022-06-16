@@ -8,14 +8,12 @@
 import UIKit
 import CoreData
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+            return true
     }
 
     // MARK: UISceneSession Lifecycle
@@ -79,3 +77,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - To be able to pressent any VC from any cell in any TableView or CollectionView
+extension UIApplication
+{
+    class func topViewController(_ base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController?
+    {
+        if let nav = base as? UINavigationController
+        {
+            let top = topViewController(nav.visibleViewController)
+            return top
+        }
+
+        if let tab = base as? UITabBarController
+        {
+            if let selected = tab.selectedViewController
+            {
+                let top = topViewController(selected)
+                return top
+            }
+        }
+
+        if let presented = base?.presentedViewController
+        {
+            let top = topViewController(presented)
+            return top
+        }
+        return base
+    }
+}

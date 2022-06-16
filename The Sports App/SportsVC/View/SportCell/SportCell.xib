@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SportCell" customModule="The_Sports_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="232" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="232" height="283"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lpb-zU-PQ2">
+                        <rect key="frame" x="10" y="0.0" width="212" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="ilv-SG-pmZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzi-vr-Qq6">
+                        <rect key="frame" x="90.5" y="160" width="51.5" height="113"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="0.19035464530000001" green="0.1365096569" blue="0.30589896439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Pzi-vr-Qq6" firstAttribute="top" secondItem="lpb-zU-PQ2" secondAttribute="bottom" constant="10" id="HwD-Ui-Ccc"/>
+                <constraint firstItem="Pzi-vr-Qq6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="O03-3X-0dD"/>
+                <constraint firstItem="lpb-zU-PQ2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eoO-Wl-q3y"/>
+                <constraint firstAttribute="trailing" secondItem="lpb-zU-PQ2" secondAttribute="trailing" constant="10" id="iW0-FM-LGb"/>
+                <constraint firstItem="lpb-zU-PQ2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="peW-5b-av0"/>
+                <constraint firstAttribute="bottom" secondItem="Pzi-vr-Qq6" secondAttribute="bottom" constant="10" id="qNI-Ep-w2q"/>
+            </constraints>
+            <size key="customSize" width="232" height="283"/>
+            <connections>
+                <outlet property="sportIconeImagwView" destination="lpb-zU-PQ2" id="PgA-xM-ElM"/>
+                <outlet property="sportTitleLabel" destination="Pzi-vr-Qq6" id="fZA-St-XzZ"/>
+            </connections>
+            <point key="canvasLocation" x="5.7971014492753632" y="191.18303571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>
